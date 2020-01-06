@@ -27,6 +27,11 @@ export class ManageBookingComponent implements OnInit{
     
   }
 
-
+onDelete(id:string){
+  if(confirm("Are you sure to delete this?")){
+    this.afs.doc('booking/'+ id).delete();
+    this.toastr.warning("Delete Successful")
+  }
+}
 
 }

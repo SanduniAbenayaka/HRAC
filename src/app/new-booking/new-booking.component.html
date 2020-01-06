@@ -1,0 +1,56 @@
+<div class="card" >
+    <div class="card-body">
+        <form  [formGroup]="Bookingform" (submit)="onSubmit(Bookingform.value)">
+            <div class="image">
+                <img [src]="imgSrc" width="350px" height="200px" (click)= fileUploader.click()>
+            </div>
+           <!-- <div class="form-group">
+               
+                <input type="file" class="form-control" #fileUploader formControlName="imageurl" (change)="ShowPreview($event)">
+            </div>!-->
+
+            <div class="form-group">
+                <input  class="form-control" formControlName="name" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <input  class="form-control" formControlName="session" placeholder="Hall name">
+            </div>
+            <div class="form-group">
+                <select  class="form-control" formControlName="code"  >
+                    <option>Subject code</option>
+                    <option>SCS1201</option>
+                    <option>SCS1202</option>
+                    <option>SCS1203</option>
+                    <option>SCS1204</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <select  class="form-control" formControlName="lecture">
+                    <option>Subject</option>
+                    <option>DSA</option>
+                    <option>Database</option>
+                    <option>PLC</option>
+                    <option>SE</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <input  class="form-control" formControlName="time" placeholder="Time">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <a href="/Halls" class="btn btn-primary btn-block float-right"> Go To Halls</a>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <button  class="btn btn-success btn-block float-right" type="submit">submit</button>
+                </div>
+                
+            </div>
+            
+
+        </form>
+    </div>
+</div>
+ 
